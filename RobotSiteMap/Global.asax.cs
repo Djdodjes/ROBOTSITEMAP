@@ -17,5 +17,13 @@ namespace RobotSiteMap
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
+
 }

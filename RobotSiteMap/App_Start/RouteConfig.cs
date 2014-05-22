@@ -12,6 +12,9 @@ namespace RobotSiteMap
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            //routes.IgnoreRoute("robots.txt");
+            routes.IgnoreRoute("{allaspx}", new { allaspx = @"..aspx(/.*)?" });
+            routes.IgnoreRoute("{favicon}", new { favicon = @"(./)?favicon.ico(/.*)?" });
 
             routes.MapRoute(
                 name: "Default",
