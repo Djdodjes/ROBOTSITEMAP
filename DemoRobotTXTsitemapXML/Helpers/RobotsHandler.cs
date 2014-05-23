@@ -1,9 +1,9 @@
-﻿using System;
-using System.Text;
-using System.Web;
-
-namespace DemoRobotTXTsitemapXML.Helpers
+﻿namespace DemoRobotTXTsitemapXML.Helpers
 {
+    using System;
+    using System.Text;
+    using System.Web;
+
     public class RobotsHandler : IHttpHandler
     {
         /// <summary>
@@ -33,13 +33,11 @@ namespace DemoRobotTXTsitemapXML.Helpers
             contentBuilder.AppendLine("User-agent: *");
             contentBuilder.AppendLine("Disallow: /Home/About");
             contentBuilder.AppendLine("Disallow: /Home/Contact");
-            //contentBuilder.AppendLine("Sitemap: http://www.beableto.fr/sitemap");
+            contentBuilder.AppendLine("Sitemap: http://www.mon-site.fr/sitemap");
 
             //contentBuilder.AppendLine("Disallow: /");
-            //return File(Encoding.UTF8.GetBytes(contentBuilder.ToString()), "text/plain");
-            //var robotsFile = "~/robots.txt";
-            //return File(robotsFile, "text/plain");
-
+            //<meta name="robots" content="noindex" />
+         
             // return the robots content
             context.Response.Write(contentBuilder);
         }
