@@ -21,7 +21,6 @@
         }
 
         public void ProcessRequest(HttpContext context)
-        
         {
             // Récupération du domaine(nom) de notre site 
             string domain = context.Request.Url.Host;
